@@ -1,43 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../static/index.css">
-  <title>Dog Breed Identification</title>
-</head>
-<body>
-  <header>
-    <h1>Dog Breed Identification</h1>
-  </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../static/index.css" />
+		<title>Dog Breed Identification</title>
+	</head>
+	<body>
+		<header class="header">
+			<nav class="header-navigation">
+				<ul class="header__nav">
+					<li><a href="/" class="nav-link">Home</a></li>
+					<li>
+						<a
+							href="https://www.kaggle.com/competitions/dog-breed-identification/data"
+							class="nav-link"
+							target="_blank"
+							>Dataset</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www.kaggle.com/code/abdulrehmandev/dog-breed-identification"
+							target="_blank"
+							class="nav-link"
+							>Notebook</a
+						>
+					</li>
+					<li><a href="/predict" class="nav-link">Predict</a></li>
+					<li><a href="/details" class="nav-link">Details</a></li>
+				</ul>
+			</nav>
+		</header>
 
-  <div class="dropdown">
-    <form action="/predict" method="post" enctype="multipart/form-data">
-      <label>
-        <input type="file" name="file"/>
-      </label>
-<!--      <input type="text"/>
-  form  class="drop-cont"
-  label class="custom-file-upload"
-  input class="file-upload"
--->
-      <button type="submit">Predict</button>
-    </form>
-  </div>
-
-  <div class="prediction">
-    <h2>Prediction</h2>
-    <div class="pred-cont">
-      <div class="row">
-        <p class="title">Dog Breed</p>
-        <p id="value">{{pred.breed}}</p>
-      </div>
-      <div class="row">
-        <p class="title">Percentage</p>
-        <p id="value">{{pred.perc}}</p>
-      </div>
-    </div>
-  </div>
-</body>
+		<div class="hero">
+			<h1 class="hero-title">Dog Breed Identification</h1>
+			<p class="hero-text">
+				Who's a good dog? Who likes ear scratches? Well, it seems those fancy
+				deep neural networks don't have all the answers. However, maybe they can
+				answer that ubiquitous question we all ask when meeting a four-legged
+				stranger: what kind of good pup is that?
+			</p>
+			<div class="row">
+				<a href="/predict" class="hero__predict-link">Get a Prediction</a>
+				<a href="/details" class="hero__details-link">Details</a>
+			</div>
+		</div>
+		<footer class="contribs">
+			<h4 class="contribs-title">Model Build By</h4>
+			<div class="row">
+				<a href="">
+					<img
+						class="contribs__img"
+						src="../static/image-abdulrehman.jpg"
+						alt="Abdul Rehman"
+					/>
+				</a>
+				<a href="">
+					<img
+						class="contribs__img"
+						src="../static/image-abdulrehman.jpg"
+						alt="Abdul Rehman"
+					/>
+				</a>
+				<a href="">
+					<img
+						class="contribs__img"
+						src="../static/image-abdulrehman.jpg"
+						alt="Abdul Rehman"
+					/>
+				</a>
+			</div>
+		</footer>
+	</body>
 </html>

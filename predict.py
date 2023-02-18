@@ -29,7 +29,7 @@ def get_prediction(img_path):
 
     pred = model.predict(data_batch, verbose = 1)
 
-    pred_prob = np.max(pred[0]) * 100
+    pred_prob = round(np.max(pred[0]) * 100, 2)
 
     if pred_prob < 30:
         prediction_dict = {
