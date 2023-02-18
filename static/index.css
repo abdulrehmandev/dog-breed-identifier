@@ -248,6 +248,13 @@ body {
 	scale: 0.95;
 }
 
+.format-rest {
+    margin-inline: auto;
+    text-align: center;
+    color: rgb(156, 156, 156);
+    margin-block: -1rem 3rem;
+}
+
 .prediction {
 	margin-inline: auto;
 	display: flex;
