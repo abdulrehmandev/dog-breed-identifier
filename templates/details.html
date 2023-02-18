@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../static/index.css" />
+		<title>Details | Dog Breed Identification</title>
+	</head>
+	<body>
+		<header class="header">
+			<nav class="header-navigation">
+				<ul class="header__nav">
+					<li><a href="/" class="nav-link">Home</a></li>
+					<li>
+						<a
+							href="https://www.kaggle.com/competitions/dog-breed-identification/data"
+							class="nav-link"
+							>Dataset</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www.kaggle.com/code/abdulrehmandev/dog-breed-identification"
+							target="_blank"
+							class="nav-link"
+							>Notebook</a
+						>
+					</li>
+					<li><a href="/predict" class="nav-link">Predict</a></li>
+					<li><a href="/details" class="nav-link">Details</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="details">
+			<h1 class="details-title | hero-title">Model Details</h1>
+			<p class="hero-text">
+				Our TensorFlow Keras-based machine learning model is designed to
+				accurately detect dog breeds in images. With a focus on supervised
+				learning, the model is trained on a labeled dataset that includes a
+				diverse range of dog breeds. This approach allows the model to learn
+				unique features and traits associated with each breed, which it then
+				uses to classify new images.
+			</p>
+			<p class="details-text | hero-text">
+				We are provided with a training set and a test set of images of dogs.
+				Each image has a filename that is its unique id. The dataset comprises
+				120 breeds of dogs. The goal of the work is to create a classifier
+				capable of determining a dog's breed from a photo.
+			</p>
+
+			<h1 class="breeds-title title">Breeds</h1>
+			<div class="details-breeds cols">
+				<div class="left-wing">
+					<p class="value-count">120</p>
+					<p class="value-title">unique breeds</p>
+				</div>
+				<div class="right-wing">
+					<div class="row">
+						<p class="row-title">Valid</p>
+						<p class="row-value">120</p>
+					</div>
+					<div class="row">
+						<p class="row-title">Mismatched</p>
+						<p class="row-value">0</p>
+					</div>
+					<div class="row">
+						<p class="row-title">Missing</p>
+						<p class="row-value">0</p>
+					</div>
+					<div class="row most-common">
+						<p class="row-title">Most Common</p>
+						<div class="block">
+							<div class="row">
+								<p class="breed-name">Scottish Deerhound</p>
+								<p class="breed-perc">1%</p>
+							</div>
+							<div class="row">
+								<p class="breed-name">Maltese Dog</p>
+								<p class="breed-perc">1%</p>
+							</div>
+							<div class="row">
+								<p class="breed-name">Others (9979)</p>
+								<p class="breed-perc">98%</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h1 class="values-title title">Values</h1>
+			<div class="cols">
+				<div class="left-wing">
+					<p class="value-count">10,222</p>
+					<p class="value-title">unique values</p>
+				</div>
+				<div class="right-wing">
+					<div class="row">
+						<p class="row-title">Valid</p>
+						<p class="row-value">10.2k</p>
+					</div>
+					<div class="row">
+						<p class="row-title">Mismatched</p>
+						<p class="row-value">0</p>
+					</div>
+					<div class="row">
+						<p class="row-title">Missing</p>
+						<p class="row-value">0</p>
+					</div>
+					<!-- <div class="row most-common">
+						<p class="row-title">Most Common</p>
+						<p class="row-value">Scottish Deerhound</p>
+					</div> -->
+				</div>
+			</div>
+		</div>
+
+		<footer class="contribs">
+			<h4 class="contribs-title">Model Build By</h4>
+			<div class="row">
+				<a href="">
+					<img
+						class="contribs__img"
+						src="../static/image-abdulrehman.jpg"
+						alt="Abdul Rehman"
+					/>
+				</a>
+				<a href="">
+					<img
+						class="contribs__img"
+						src="../static/image-abdulrehman.jpg"
+						alt="Abdul Rehman"
+					/>
+				</a>
+				<a href="">
+					<img
+						class="contribs__img"
+						src="../static/image-abdulrehman.jpg"
+						alt="Abdul Rehman"
+					/>
+				</a>
+			</div>
+		</footer>
+	</body>
+</html>
