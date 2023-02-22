@@ -1,4 +1,3 @@
-# import tensorflow as tf
 from tensorflow import io, image, keras, data, constant, float32
 import numpy as np
 
@@ -32,7 +31,7 @@ def get_prediction(img_path):
 
     pred_prob = round(np.max(pred[0]) * 100, 2)
 
-    if pred_prob < 30:
+    if pred_prob < 40:
         prediction_dict = {
             'breed': 'No dog detected',
             'perc': 'low'
