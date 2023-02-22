@@ -5,13 +5,13 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../static/index.css" />
-		<title>Predict | Dog Breed Identification</title>
+		<title>Prediction</title>
 	</head>
 	<body>
 		<header class="header">
 			<nav class="header-navigation">
 				<ul class="header__nav">
-					<li><a href="/" class="nav-link">Home</a></li>
+					<li><a href="index.html" class="nav-link">Home</a></li>
 					<li>
 						<a
 							href="https://www.kaggle.com/competitions/dog-breed-identification/data"
@@ -27,35 +27,31 @@
 							>Notebook</a
 						>
 					</li>
-					<li><a href="/predict" class="nav-link">Predict</a></li>
-					<li><a href="/details" class="nav-link">Details</a></li>
+					<li><a href="predict.html" class="nav-link">Predict</a></li>
+					<li><a href="details.html" class="nav-link">Details</a></li>
 				</ul>
 			</nav>
 		</header>
-
-		<form
-			class="predict-form"
-			action="/prediction"
-			method="post"
-			enctype="multipart/form-data"
-		>
-			<div class="predict-upload predict">
-				<label class="predict-label" for="fileInput">
-					Select Image
-					<input
-						required
-						id="fileInput"
-						class="predict-input"
-						accept="image/jpeg, image/jpg"
-						type="file"
-						name="file"
-					/>
-				</label>
+		<div class="prediction-body">
+			<img
+				src="{{img}}"
+				alt="Dog Image"
+				class="prediction-img"
+			/>
+			<div class="prediction-table">
+				<h1 class="prediction-title">Prediction</h1>
+				<div class="row">
+					<p class="value-title">Dog Breed</p>
+					<p class="value-count">{{breed}}</p>
+				</div>
+				<div class="row">
+					<p class="value-title">Probability Percentage</p>
+					<p class="value-count">{{perc}}</p>
+				</div>
 			</div>
-			<button class="predict-submit-btn" type="submit">Predict</button>
-		</form>
+		</div>
 
-		<p class="format-rest">Only .jpg and .jpeg format allowed</p>
+		<a href="/predict" class="back-link predict-submit-btn">Back</a>
 
 		<footer class="contribs">
 			<h4 class="contribs-title">Model Build By</h4>

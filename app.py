@@ -13,7 +13,7 @@ def details():
 
 @app.route('/predict')
 def predict():
-    return render_template('predict.html', breed = '', perc = '')
+    return render_template('predict.html')
 
 @app.route('/prediction', methods = ['POST', 'GET'])
 def prediction():
@@ -23,4 +23,10 @@ def prediction():
         f.save(fpath)
 
         prediction = get_prediction(fpath)
-        return render_template('predict.html', breed = prediction['breed'], perc = prediction['perc'])
+
+        return render_template(
+            'prediction.html',
+            img = f'../{fpath}',
+            breed = prediction['breed'],
+            perc = prediction['perc']
+        )

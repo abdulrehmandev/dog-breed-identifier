@@ -1,17 +1,18 @@
-import tensorflow as tf
+# import tensorflow as tf
+from tensorflow import io, image, keras, data, constant, float32
 import numpy as np
 
 IMG_SIZE = 224
 
 def preprocess(img_path):
-    image = tf.io.read_file(img_path)
-    image = tf.image.decode_jpeg(image, channels=3)
-    image = tf.image.convert_image_dtype(image, tf.float32)
-    image = tf.image.resize(image, size=[IMG_SIZE, IMG_SIZE])
-    return image
+    img = io.read_file(img_path)
+    img = image.decode_jpeg(img, channels=3)
+    img = image.convert_image_dtype(img, float32)
+    img = image.resize(img, size=[IMG_SIZE, IMG_SIZE])
+    return img
 
 def get_prediction(img_path):
-    model = tf.keras.models.load_model('my_model')
+    model = keras.models.load_model('my_model')
 
     BATCH_SIZE = 32
 
@@ -19,13 +20,13 @@ def get_prediction(img_path):
         lines = file.readlines()
     unique_breeds = lines[0].split(' ')
 
-    image = preprocess(img_path)
+    img = preprocess(img_path)
 
     def plc(x):
-        return image
+        return img
 
-    data = tf.data.Dataset.from_tensor_slices((tf.constant(image)))
-    data_batch = data.map(plc).batch(BATCH_SIZE)
+    data_ = data.Dataset.from_tensor_slices((constant(img)))
+    data_batch = data_.map(plc).batch(BATCH_SIZE)
 
     pred = model.predict(data_batch, verbose = 1)
 
