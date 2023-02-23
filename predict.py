@@ -33,7 +33,7 @@ def get_prediction(img_path):
 
     if pred_prob < 40:
         prediction_dict = {
-            'breed': 'No dog detected',
+            'breed': 'no_dog_detected',
             'perc': 'low'
         }
     else:
